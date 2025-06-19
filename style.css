@@ -1,0 +1,137 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z2FsJUMzJUExeGlhfGVufDB8fDB8fHww') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 30px 0;
+    color: #eee;
+    position: relative;
+    z-index: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+#semaforo {
+    width: 100px;
+    margin: 0 auto 20px auto;
+    padding: 10px;
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.luz {
+    width: 60px;
+    height: 60px;
+    margin: 10px auto;
+    border-radius: 50%;
+    background-color: gray;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 8px #000 inset;
+}
+
+#vermelho.ativo {
+    background-color: red;
+    box-shadow: 0 0 20px red;
+}
+
+#amarelo.ativo {
+    background-color: yellow;
+    box-shadow: 0 0 20px yellow;
+}
+
+#verde.ativo {
+    background-color: limegreen;
+    box-shadow: 0 0 20px limegreen;
+}
+
+button {
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 8px;
+    border: none;
+    background: #44444458;
+    color: #eee;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+button:hover:not(:disabled) {
+    background-color: #666;
+}
+
+button:disabled {
+    background-color: #222;
+    cursor: not-allowed;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ddd;
+    text-shadow: 0 0 5px #000;
+}
+
+table {
+    margin: 20px auto;
+    width: 320px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    color: #fff;
+}
+.lari {
+    background-color: #ffffff43;
+    text-align: center;
+    padding: 20px;
+    color: #fafafa;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.lari a {
+    color: #ff69b4;
+    text-decoration: none; 
+}
+
+.lari a:hover {
+    text-decoration: underline;
+}
+
+th, td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.25);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: default;
+}
