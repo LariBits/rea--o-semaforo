@@ -4,7 +4,8 @@ body {
     background: url('https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z2FsJUMzJUExeGlhfGVufDB8fDB8fHww') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
-    padding: 30px 0;
+    /* Adjusted padding-bottom to account for the footer height */
+    padding: 30px 0 100px 0; /* Assuming footer height is around 70-80px + some extra space */
     color: #eee;
     position: relative;
     z-index: 0;
@@ -94,7 +95,9 @@ table {
     backdrop-filter: blur(8px);
     color: #fff;
 }
-.lari {
+
+/* Changed .lari to .rodape for the fixed positioning */
+.rodape {
     background-color: #ffffff43;
     text-align: center;
     padding: 20px;
@@ -104,14 +107,20 @@ table {
     width: 100%;
     left: 0;
     box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    /* Ensure it's above other content if needed, though with padding it's less critical */
+    z-index: 100; 
 }
 
-.lari a {
+.rodape p.lari { /* Target the paragraph inside .rodape */
+    margin: 0; /* Remove default paragraph margin */
+}
+
+.rodape a { /* Target the anchor inside .rodape */
     color: #ff69b4;
     text-decoration: none; 
 }
 
-.lari a:hover {
+.rodape a:hover {
     text-decoration: underline;
 }
 
